@@ -250,6 +250,8 @@ h3 {
 
 
 
+
+
 .blue-box {
   width: 100vw;
   height: 200px;
@@ -495,4 +497,71 @@ footer{
 
 .shop-btn:hover {
   background-color: #f0f0f0;
+}
+
+/* Menu item container */
+.menu-item {
+  position: relative;
+}
+
+/* Mega menu base styling */
+.mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff !important;
+  min-width: 250px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  z-index: 100;
+  border: 1px solid #eee;
+}
+
+/* Show menu on hover or active class */
+.menu-item:hover .mega-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Content layout inside mega menu */
+.mega-menu .menu-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Each block inside mega menu */
+.mega-menu .menu-content > div {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+/* Remove border from last block */
+.mega-menu .menu-content > div:last-child {
+  border-bottom: none;
+}
+
+/* Links inside mega menu */
+.mega-menu .menu-content a {
+  color: #000;
+  font-weight: 500;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Hover effect for links */
+.mega-menu .menu-content a:hover {
+  text-decoration: underline;
+}
+
+/* Optional: Paragraph style inside mega menu */
+.mega-menu .menu-content p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #555;
 }
