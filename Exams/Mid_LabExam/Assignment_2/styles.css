@@ -1,0 +1,430 @@
+header {
+  /* background-color: aqua; */
+  height: 250px;
+  width: 100%;
+}
+
+.head-sect {
+  /* background-color: red; */
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 15%;
+  margin-left: 8px;
+}
+
+.logo img {
+  height: 15px;
+}
+
+.input {
+  width: 60%;
+  margin-right: 50px;
+  margin-top: -5px;
+  position: relative;
+}
+
+.input i {
+  position: absolute;
+  left: 20px; 
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 20px;
+}
+
+.input input {
+  width: 100%;
+  height: 60px;
+  border-radius: 100px;
+  padding-left: 50px; 
+  border: 2px solid black; 
+  font-size: large;
+  outline: none;
+}
+
+.icons {
+  width: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 50px;
+}
+
+.icons i {
+  font-size: 20px;
+}
+
+.second-part {
+  /* background-color: blue; */
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropdown {
+  width: 67%;
+  /* background-color: pink; */
+}
+
+.dropdown ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+  align-items: center;
+  font-size: larger;
+  color: black;
+}
+
+.moveable {
+  width: 100%;
+  height: 45px;
+  background-color: rgb(242, 238, 238);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.moveable a {
+  margin: 30px;
+  text-decoration: none;
+  color: black;
+}
+
+.moveable a:hover {
+  color: rgb(75, 51, 18);
+}
+
+.sale {
+  width: 100%;
+  height: 40px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
+
+.sale a {
+  text-decoration: none;
+  color: white;
+}
+
+main {
+  /* background-color: rosybrown; */
+  width: 100%;
+  height: 2890px;
+  padding-top:40px;
+}
+
+.circle-sec {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap; /* Allows wrapping if there are many circles */
+  text-align: center;
+  /* background-color: seagreen; */
+  height: 170px;
+}
+
+.circle-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: white;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.circle-container p {
+  margin-top: 5px;
+  font-size: 14px;
+  color: black;
+  text-align: center;
+}
+
+.main-image {
+  width: 100%;
+  height: 600px;
+  background-color: bisque;
+
+  overflow: hidden;
+}
+
+.main-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.images{
+  height:  550px;
+  /* background-color: red; */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+
+
+}
+
+.images img{
+  height: 250px;
+  width: auto;
+  object-fit: cover; 
+  display: block; 
+  margin-bottom: 10px;
+  
+  
+}
+
+.blue-box {
+  width: 100vw;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.blue-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover; 
+}
+
+.landed{
+  width: 100%;
+  height: 100px;
+ /* background-color: aqua; */
+}
+
+.landed p{
+  font-size: 40px;
+  font-weight: bold;
+  margin-left: 40px;
+}
+
+.landed div{
+  margin-left: 40px;
+  margin-top:-10px;
+  
+}
+
+.img-sec {
+  height: 550px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.img {
+  text-align: center; 
+}
+
+.img img {
+  height: 500px;
+ 
+}
+
+.img p {
+  margin-top: 10px;
+  font-size: 18px;
+  color: black; 
+  font-weight: bold;
+}
+
+.marg{
+  margin-top: 60px;
+}
+
+footer{
+  width: 100%;
+  height: 600px;
+  /* background-color: palevioletred; */
+  padding-top: 50px;
+  
+}
+
+.account{
+  width: 100%;
+  height: 250px;
+  background-color: rgb(242, 239, 239);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+
+.first{
+  width: 50%;
+  /* background-color: rgb(29, 255, 180); */
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.first p{
+  font-size: 40px;
+  color: black;
+  font-size: 45px;
+  font-weight: bold;
+}
+
+.second{
+  width: 50%;
+  /* background-color: antiquewhite; */
+  height: 250px;
+  text-align: center;
+  padding-right: 20px;
+
+}
+
+.newsletter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 50px;
+
+}
+
+.newsletter input {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #777;
+}
+
+.newsletter button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.newsletter button:hover {
+  background-color: #333;
+}
+
+.terms {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #333;
+}
+
+.terms a {
+  color: black;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+
+.signup{
+  height: 150px;
+  /* background-color: blue; */
+  margin-top: -70px;
+ 
+}
+
+.Sign{
+  margin-top: -10px;
+  font-size:20px;
+}
+
+.footer-sections {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  /* background-color: aqua; */
+  padding-left: 20px;
+  height: 200px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 20px;
+}
+
+.footer-column h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  font-size: 17px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  font-size: 20px;
+}
+
+.social-icons i {
+  cursor: pointer;
+  color: #333;
+}
+
+.app-download img {
+  width: 120px;
+  margin-top: 10px;
+}
+
+.footer-logos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+}
+
+.footer-logos img {
+  height: 40px;
+  margin: 0 10px;
+}
