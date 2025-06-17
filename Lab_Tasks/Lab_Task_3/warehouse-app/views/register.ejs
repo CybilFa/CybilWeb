@@ -1,0 +1,73 @@
+<main class="form-page">
+  <div class="form-container">
+    <img
+      src="https://mediahub.debenhams.com/dbz_prod_warehouse-logo-blk-on-wht?w=141&dpr=2&ttl=604800"
+      alt="logo"
+      class="auth-logo"
+    />
+
+        
+    <% if (success_msg) { %>
+      <div class="flash success"><%= success_msg %></div>
+    <% } %>
+    <% if (error_msg) { %>
+      <div class="flash error"><%= error_msg %></div>
+    <% } %>
+
+    <h2>Create an Account</h2>
+
+    <form action="/register" method="POST">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name"><i class="fa-regular fa-user"></i> Full Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="Enter your full name"
+          />
+        </div>
+        <div class="form-group">
+          <label for="email"><i class="fa-regular fa-envelope"></i> Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="Enter your email"
+          />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="password"><i class="fa-solid fa-lock"></i> Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            placeholder="Create a password"
+          />
+        </div>
+        <div class="form-group">
+          <label for="confirmPassword"><i class="fa-solid fa-lock"></i> Confirm Password</label>
+          <input
+            type="password"
+            id="confirmPassword"
+            name="confirmPassword"
+            required
+            placeholder="Confirm your password"
+          />
+        </div>
+      </div>
+
+      <button type="submit" class="submit-btn">Register</button>
+
+      <p class="form-link">
+        Already registered? <a href="/login">Login here</a>
+      </p>
+    </form>
+  </div>
+</main>
