@@ -1,0 +1,19 @@
+<%- include('partials/header') %>
+
+<h2>Your Cart</h2>
+<table>
+  <tr><th>Product</th><th>Qty</th><th>Price</th><th>Subtotal</th><th>Action</th></tr>
+  <% cart.forEach(item => { %>
+    <tr>
+      <td><%= item.title %></td>
+      <td><%= item.quantity %></td>
+      <td>Rs. <%= item.price %></td>
+      <td>Rs. <%= item.quantity * item.price %></td>
+      <td><a href="/remove-from-cart/<%= item._id %>">Remove</a></td>
+    </tr>
+  <% }) %>
+</table>
+<p>Total: Rs. <%= total %></p>
+<a href="/checkout">Proceed to Checkout</a>
+
+<%- include('partials/footer') %>
