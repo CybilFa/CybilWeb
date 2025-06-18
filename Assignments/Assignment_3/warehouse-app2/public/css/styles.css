@@ -1,0 +1,197 @@
+main {
+  /* background-color: rosybrown; */
+  width: 100%;
+  height: 2890px; 
+  padding-top:35px;
+}
+
+.circle-sec {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap; 
+  text-align: center;
+  /* background-color: seagreen; */
+  height: 170px;
+}
+
+.circle-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: white;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.circle-container p {
+  margin-top: 5px;
+  font-size: 14px;
+  color: black;
+  text-align: center;
+}
+
+.main-image {
+  width: 100%;
+  height: 600px;
+  background-color: bisque;
+
+  overflow: hidden;
+}
+
+.main-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+}
+
+.slider-container {
+  margin-bottom: 100px; 
+  position: relative;
+}
+
+.images {
+  height: 550px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.img {
+  position: relative;
+  width: 30%; 
+}
+
+.img img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Overlay container */
+.overlay {
+  position: absolute;
+  bottom: 20px; 
+  left: 20px;
+  width: calc(100% - 40px); 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  
+}
+
+h3 {
+  font-size: 28px;
+  font-weight: bold;
+  color: white !important;
+  margin-bottom: 8px; 
+}
+
+/* Button styling */
+.shop-btn2 {
+  padding: 14px 40px;
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: flex-start; 
+  width: 100%
+}
+
+.shop-btn2:hover {
+  background-color: white;
+  color: black;
+}
+
+
+.shop-btn {
+  background-color: #fff;
+  color: black;
+  border: none;
+  padding: 10px 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+ 
+}
+
+.shop-btn:hover {
+  background-color: #f0f0f0;
+}
+
+
+.blue-box {
+  width: 100vw;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.blue-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover; 
+}
+
+.landed{
+  width: 100%;
+  height: 100px;
+ /* background-color: aqua; */
+}
+
+.landed p{
+  font-size: 40px;
+  font-weight: bold;
+  margin-left: 40px;
+}
+
+.landed div{
+  margin-left: 40px;
+  margin-top:-10px;
+  
+}
+
+.img-sec {
+  height: 550px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+
+
+.marg{
+  margin-top: 60px;
+}
+
+

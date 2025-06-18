@@ -1,0 +1,86 @@
+<h2 style="text-align: center; font-family: Arial, sans-serif; margin-top: 20px; color: #333;">Your Cart</h2>
+
+<table style="
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+">
+  <tr style="background-color: #f8f8f8; color: #333;">
+    <th style="padding: 12px; border: 1px solid #ddd;">Product</th>
+    <th style="padding: 12px; border: 1px solid #ddd;">Qty</th>
+    <th style="padding: 12px; border: 1px solid #ddd;">Price</th>
+    <th style="padding: 12px; border: 1px solid #ddd;">Subtotal</th>
+    <th style="padding: 12px; border: 1px solid #ddd;">Action</th>
+  </tr>
+
+  <% cart.forEach(item => { %>
+    <tr style="text-align: center;">
+      <td style="padding: 10px; border: 1px solid #ddd;"><%= item.title %></td>
+      <td style="padding: 10px; border: 1px solid #ddd;"><%= item.quantity %></td>
+      <td style="padding: 10px; border: 1px solid #ddd;">Rs. <%= item.price %></td>
+      <td style="padding: 10px; border: 1px solid #ddd;">Rs. <%= item.quantity * item.price %></td>
+      <td style="padding: 10px; border: 1px solid #ddd;">
+        <a href="/remove-from-cart/<%= item._id %>" style="
+          color: #e74c3c;
+          text-decoration: none;
+          font-weight: bold;
+          padding: 6px 10px;
+          border: 1px solid #e74c3c;
+          border-radius: 4px;
+          transition: 0.2s;
+        " onmouseover="this.style.backgroundColor='#e74c3c'; this.style.color='#fff';"
+           onmouseout="this.style.backgroundColor=''; this.style.color='#e74c3c';"
+        >Remove</a>
+      </td>
+    </tr>
+  <% }) %>
+</table>
+
+<p style="
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #444;
+">
+  Total: Rs. <%= total %>
+</p>
+
+<div style="text-align: center; margin-top: 20px;">
+  <a href="/checkout" style="
+    background-color: #3498db;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease;
+  "
+  onmouseover="this.style.backgroundColor='#2980b9'"
+  onmouseout="this.style.backgroundColor='#3498db'"
+  >
+    Proceed to Checkout
+  </a>
+</div>
+
+<div style="text-align: center; margin-top: 20px;">
+  <a href="/" style="
+    background-color: #3498db;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease;
+  "
+  onmouseover="this.style.backgroundColor='#2980b9'"
+  onmouseout="this.style.backgroundColor='#3498db'"
+  >
+    Back to Shopping
+  </a>
+</div>

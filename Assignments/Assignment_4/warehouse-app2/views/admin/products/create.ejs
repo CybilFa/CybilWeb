@@ -1,0 +1,70 @@
+<h3 style="
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 30px;
+  color: #2c3e50;
+">Create New Product</h3>
+
+<form action="" method="post" enctype="multipart/form-data" style="
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+">
+
+  <label for="title" style="display: block; margin-bottom: 8px; font-weight: bold;">Title:</label>
+  <input type="text" name="title" id="title" value="bracelet" style="
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  ">
+
+  <label for="description" style="display: block; margin-bottom: 8px; font-weight: bold;">Description:</label>
+  <textarea name="description" id="description" style="
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+  ">Gray color</textarea>
+
+  <label for="price" style="display: block; margin-bottom: 8px; font-weight: bold;">Price:</label>
+  <input type="text" name="price" id="price" value="500" style="
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  ">
+
+  <label for="image" style="display: block; margin-bottom: 8px; font-weight: bold;">Product Image:</label>
+  <input type="file" name="image" id="image" accept="image/*" style="
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  ">
+
+  <input type="submit" value="Create Product" style="
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  "
+  onmouseover="this.style.backgroundColor='#2980b9'"
+  onmouseout="this.style.backgroundColor='#3498db'"
+  >
+</form>
