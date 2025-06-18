@@ -1,0 +1,153 @@
+<header>
+  <!-- first part -->
+  <div class="head-sect">
+    <div class="logo">
+      <img
+        src="https://mediahub.debenhams.com/dbz_prod_warehouse-logo-blk-on-wht?w=141&dpr=2&ttl=604800"
+        alt="logo"
+      />
+    </div>
+    <div class="input">
+      <i class="fa fa-search"></i>
+      <input type="text" placeholder="Search for products, brands and more" />
+    </div>
+    <div class="icons">
+      <div class="user-dropdown">
+  <i class="fa-regular fa-user" id="userIcon"></i>
+ <div class="user-card" id="userCard">
+  <p class="welcome-text">👋 Welcome!</p>
+
+  <a href="/login" class="card-btn">Login</a>
+  <a href="/logout" class="card-btn">Logout</a>
+  
+  <hr>
+
+  <a href="/contact-us" class="card-btn">📩 Contact Us</a>
+  <a href="/my-complaints" class="card-btn">📝 My Complaints</a>
+</div>
+
+</div>
+
+
+    <a href="/wishlist" title="Wishlist">
+       <i class="fa-solid fa-heart" style="color: #e74c3c;"></i>
+    </a>
+      <i class="fa-solid fa-cart-shopping"></i>
+    </div>
+    <!-- first part ends -->
+
+    <!-- second part -->
+  </div>
+
+  <div class="second-part">
+    <div class="dropdown">
+      <ul>
+        <li>
+          <a href="#">Sale</a>
+          <div class="dropdown-content">
+            <a href="#">Sale 1</a>
+            <a href="#">Sale 2</a>
+          </div>
+        </li>
+        <li>
+          <a href="#">New In</a>
+          <div class="dropdown-content">
+            <a href="#">New Item 1</a>
+            <a href="#">New Item 2</a>
+          </div>
+        </li>
+        <li>
+          <a href="#">Clothing</a>
+          <div class="dropdown-content">
+            <a href="#">Men</a>
+            <a href="#">Women</a>
+          </div>
+        </li>
+        <li>
+          <a href="#">Dresses</a>
+          <div class="dropdown-content">
+            <a href="#">Casual Dresses</a>
+            <a href="#">Party Dresses</a>
+          </div>
+        </li>
+        <li>
+          <a href="#">Occasionwear</a>
+          <div class="dropdown-content">
+            <a href="#">Wedding</a>
+            <a href="#">Festive</a>
+          </div>
+        </li>
+        <li>
+          <a href="#">Shoes & Accessories</a>
+          <div class="dropdown-content">
+            <a href="#">Shoes</a>
+            <a href="#">Bags</a>
+            <a href="#">Jewelry</a>
+          </div>
+        </li>
+        <li>
+          <a href="#">Shop by fit</a>
+          <div class="dropdown-content">
+            <a href="#">Petite</a>
+            <a href="#">Tall</a>
+            <a href="#">Plus Size</a>
+          </div>
+        </li>
+        <li>
+          <a href="#">Winter</a>
+          <div class="dropdown-content">
+            <a href="#">Coats</a>
+            <a href="#">Knitwear</a>
+          </div>
+        </li>
+        <li>
+          <a href="#">Home</a>
+          <div class="dropdown-content">
+            <a href="#">Bedding</a>
+            <a href="#">Decor</a>
+          </div>
+        </li>
+        <li>
+          <a href="#">Brands</a>
+          <div class="dropdown-content">
+            <a href="#">Brand A</a>
+            <a href="#">Brand B</a>
+            <a href="#">Brand C</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- second part ends -->
+
+  <!-- moveable part -->
+  <div class="moveable">
+    <marquee behavior="" direction="">
+      <a href="">Upto 50% Off Warehouse | Shop Offer </a>
+      <a href="">30% Off New Season | Shop Offer </a>
+      <a href="">New Season Warehouse | Shop Now </a>
+    </marquee>
+  </div>
+  <!-- moveable part ends -->
+
+  <!-- sale part  -->
+  <div class="sale">
+    <a href="">Free Delivery On Orders Over £50</a>
+  </div>
+</header>
+
+<script>
+  const userIcon = document.getElementById("userIcon");
+  const userCard = document.getElementById("userCard");
+
+  userIcon.addEventListener("click", () => {
+    userCard.style.display = userCard.style.display === "block" ? "none" : "block";
+  });
+
+ 
+  document.addEventListener("click", function (event) {
+    if (!userIcon.contains(event.target) && !userCard.contains(event.target)) {
+      userCard.style.display = "none";
+    }
+  });
+</script>

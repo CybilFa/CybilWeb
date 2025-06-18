@@ -1,0 +1,15 @@
+<h2>All User Complaints (Admin)</h2>
+<% if (complaints.length > 0) { %>
+  <ul>
+    <% complaints.forEach(c => { %>
+      <li>
+        <strong>User:</strong> <%= c.userId.email %><br>
+        <strong>Order ID:</strong> <%= c.orderId %> <br>
+        <strong>Message:</strong> <%= c.message %><br>
+        <small>Submitted: <%= c.submittedAt.toLocaleString() %></small>
+      </li>
+    <% }) %>
+  </ul>
+<% } else { %>
+  <p>No complaints yet.</p>
+<% } %>

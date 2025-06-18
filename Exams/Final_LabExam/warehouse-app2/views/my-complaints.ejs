@@ -1,0 +1,15 @@
+<h2 style="text-align:center; color:#2c3e50; margin-bottom:20px;">My Complaints</h2>
+
+<% if (complaints.length > 0) { %>
+  <ul style="list-style:none; padding:0; max-width:700px; margin:0 auto;">
+    <% complaints.forEach(c => { %>
+      <li style="background:#fff; padding:15px 20px; margin-bottom:15px; border-left:4px solid #007bff; border-radius:5px; box-shadow:0 2px 5px rgba(0,0,0,0.1);">
+        <strong style="display:inline-block; margin-bottom:5px;">Order ID:</strong> <%= c.orderId %> <br>
+        <strong style="display:inline-block; margin-top:5px;">Message:</strong> <%= c.message %> <br>
+        <small style="display:block; margin-top:8px; color:#666;">Submitted: <%= c.submittedAt.toLocaleString() %></small>
+      </li>
+    <% }) %>
+  </ul>
+<% } else { %>
+  <p style="text-align:center; color:#777; font-style:italic;">No complaints submitted yet.</p>
+<% } %>
