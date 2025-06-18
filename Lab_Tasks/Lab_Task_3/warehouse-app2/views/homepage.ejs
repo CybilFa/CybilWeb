@@ -1,0 +1,137 @@
+<style>
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 40px;
+    background-color: #f5f7fa;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  .product-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+
+  .product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  }
+
+  .product-image-container {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .product-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  .product-card:hover .product-image-container img {
+    transform: scale(1.1);
+  }
+
+  .product-details {
+    padding: 16px;
+  }
+
+  .product-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #2c3e50;
+  }
+
+  .product-description {
+    font-size: 14px;
+    color: #7f8c8d;
+    margin-bottom: 10px;
+  }
+
+  .product-price {
+    color: #e74c3c;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+
+  .add-to-cart-btn {
+    width: 100%;
+    background-color: #27ae60;
+    color: #fff;
+    padding: 10px 0;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+
+  .add-to-cart-btn:hover {
+    background-color: #219150;
+    transform: scale(1.03);
+  }
+    .wishlist-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: white;
+    padding: 6px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: background 0.3s ease;
+    z-index: 2;
+  }
+
+  .wishlist-icon i {
+    color: #e74c3c;
+    font-size: 18px;
+  }
+
+  .wishlist-icon:hover {
+    background: #f0f0f0;
+  }
+</style>
+
+<h1 style="text-align: center; font-family: 'Segoe UI', sans-serif; margin-top: 30px; color: #2c3e50;">Our Products</h1>
+
+<div class="product-grid">
+  <% for (let product of products) { %>
+    <div class="product-card">
+      <div class="product-image-container">
+        <% if (product.picture) { %>
+          <img src="/uploads/<%= product.picture %>" alt="<%= product.title %>">
+        <% } else { %>
+          <div style="height: 100%; display: flex; align-items: center; justify-content: center; background: #eee;">No Image</div>
+        <% } %>
+         <!-- Wishlist Heart Button Form -->
+        <form action="/wishlist/add/<%= product._id %>" method="POST" class="wishlist-icon">
+            <button type="submit" style="background: transparent; border: none;">
+               <i class="fa fa-heart"></i>
+            </button>
+        </form>
+  
+      </div>
+
+       
+  
+      <div class="product-details">
+        <div class="product-title"><%= product.title %></div>
+        <div class="product-description"><%= product.description %></div>
+        <div class="product-price">Rs. <%= product.price %></div>
+        <form action="/add-to-cart/<%= product._id %>" method="POST">
+          <button type="submit" class="add-to-cart-btn">🛒 Add to Cart</button>
+        </form>
+      </div>
+    </div>
+  <% } %>
+</div>
